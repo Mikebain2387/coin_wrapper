@@ -2,11 +2,15 @@
 Define Variables for Coins:
 Create variables to store the number of each type of coin: pennies, nickels, dimes, and quarters.
 */
+
 const currencyValue = [.01, 0.05, .10, .25];
 let coins = [12521, 1602, 4411, 9171];
 const type = ['pennies', 'nickels', 'dimes', 'quarters'];
 let myCoins=[];
+let wrappers =[50, 40, 50, 40];
+let wrapperType = ['Penny Wrappers', 'Nickel Wrappers', 'Dime Wrappers', 'Quarter Wrappers'];
 let total = 0;
+
 /*
 Calculate Total Value of Coins:
 Write code to calculate the total value of each type of coin in dollars.
@@ -51,8 +55,7 @@ Quarters: 40 coins per wrapper
 Calculate the number of wrappers needed for each type of coin.
 Calculate the remaining coins that do not fill a wrapper completely.
 */
-let wrappers =[50, 40, 50, 40];
-let wrapperType = ['Penny Wrappers', 'Nickel Wrappers', 'Dime Wrappers', 'Quarter Wrappers'];
+
 let penniesWrapper = Math.floor(coins[0]/wrappers[0]);
 console.log(penniesWrapper +' '+ wrapperType[0] )
 let penniesRemain = coins[0] % wrappers[0];
