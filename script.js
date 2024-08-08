@@ -2,9 +2,9 @@
 Define Variables for Coins:
 Create variables to store the number of each type of coin: pennies, nickels, dimes, and quarters.
 */
-let currencyValue = [.01, 0.05, .10, .25];
-let coins = [1500, 601, 411, 170];
-let type = ['pennies', 'nickels', 'dimes', 'quarters'];
+const currencyValue = [.01, 0.05, .10, .25];
+let coins = [12521, 1602, 4411, 9171];
+const type = ['pennies', 'nickels', 'dimes', 'quarters'];
 let myCoins=[];
 let total = 0;
 /*
@@ -38,14 +38,9 @@ myCoins.push(quarters);
 quarters = quarters.toFixed(2);
 console.log('$'+ quarters + ' in ' + type[3])
 
-console.log(myCoins)
+//console.log(myCoins)
 
-for(let i=0; i<myCoins.length; i++){
- total += myCoins[i];
-}
-total = total.toFixed(2);
 
-console.log('$' + total + ' in total')
 /*
 Sort Coins into Wrappers:
 Use the standard capacity for each type of coin wrapper:
@@ -56,6 +51,29 @@ Quarters: 40 coins per wrapper
 Calculate the number of wrappers needed for each type of coin.
 Calculate the remaining coins that do not fill a wrapper completely.
 */
+let wrappers =[50, 40, 50, 40];
+let wrapperType = ['Penny Wrappers', 'Nickel Wrappers', 'Dime Wrappers', 'Quarter Wrappers'];
+let penniesWrapper = Math.floor(coins[0]/wrappers[0]);
+console.log(penniesWrapper +' '+ wrapperType[0] )
+let penniesRemain = coins[0] % wrappers[0];
+console.log(penniesRemain + ' pennies left over')
+
+
+
+let NickelWrapper = Math.floor(coins[1]/wrappers[1]);
+console.log(NickelWrapper +' '+ wrapperType[1] )
+let nickelRemain = coins[1] % wrappers[1];
+console.log(nickelRemain + ' nickels left over')
+
+let dimeWrapper = Math.floor(coins[2]/wrappers[2])
+console.log(dimeWrapper +' '+ wrapperType[2] )
+let dimesRemain = coins[2] % wrappers[2];
+console.log(dimesRemain + ' dimes left over')
+
+let quarterWrapper = Math.floor(coins[3]/wrappers[3]);
+console.log(quarterWrapper +' '+ wrapperType[3] )
+let quarterRemain = coins[3] % wrappers[3];
+console.log(quarterRemain + ' quarters left over')
 
 
 /*
@@ -65,3 +83,9 @@ Use console.log to display the total amount in dollars.
 */
 
 
+for(let i=0; i<myCoins.length; i++){
+ total += myCoins[i];
+}
+total = total.toFixed(2);
+
+console.log('$' + total + ' in total')
