@@ -11,6 +11,7 @@ let wrappers =[50, 40, 50, 40];
 let wrapperType = ['Penny Wrappers', 'Nickel Wrappers', 'Dime Wrappers', 'Quarter Wrappers'];
 let total = 0;
 
+
 /*
 Calculate Total Value of Coins:
 Write code to calculate the total value of each type of coin in dollars.
