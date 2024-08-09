@@ -4,7 +4,7 @@ let type = ['pennies', 'nickels', 'dimes', 'quarters'];
 //let myCoins=[];
 let wrappers =[50, 40, 50, 40];
 let wrapperType = ['Penny Wrappers', 'Nickel Wrappers', 'Dime Wrappers', 'Quarter Wrappers'];
-let total = [];
+let total = [0 0 0 0 ];
 
 
 
@@ -25,6 +25,15 @@ for( let i =0; type.length; i++){
  let wrapper = Math.floor(coins[i]/wrappers[i]);
  console.log(wrapper[i] +' '+ wrapperType[i] );
 }
+
+
+
+
+
+
+
+
+
 
 /*
  let nickelRemain = coins[1] % wrappers[1];
